@@ -18,7 +18,10 @@
 }
 
 body{
-    background-color: var(--dark);
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 h1, i {
@@ -59,12 +62,6 @@ h1 {
     align-self: center;
     justify-self: center;
     padding :10px;
-
-
-}
-
-.title {
-    margin-bottom: 80px;
 }
 
 .underline{
@@ -75,7 +72,7 @@ h1 {
 .underline:after {
     content: "";
     position: absolute;
-    left: 0
+    left: 0;
     bottom: -15px;
     border-width: 1.5px;
     border-style: solid;
@@ -91,19 +88,32 @@ h1 {
     100%{width: 100%;}
 }
 
-.social{
-    display: flex;
-}
 
 .social_item{
-    display:flex;
-    align-items: center;
-    margin: 20px 0;
+
+    position: relative;
+    width: 166px;
+    height: 25px;
 }
 
 
+/* jf. */
 
+.logo {
+position: absolute;
+width: 107px;
+height: 41px;
+left: 62px;
+top: 34px;
 
+font-family: Work Sans;
+font-style: normal;
+font-weight: 300;
+font-size: 80px;
+line-height: 94px;
+color: var(--light);
+
+}
 
 .top_profile{
     grid-area: top_profile;
